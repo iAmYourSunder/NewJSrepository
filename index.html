@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SviatikShop</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer type="module" src="domApp.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="headertitle">SV-Shop</h1>
+    <div class="headercart" id="product-cart-icon">
+        <span class="headercart-icon">🛒</span>
+        <span class="headercart-quantity" id="cart-quantity-header">0</span>
+        <span class="headercart-total" id="cart-total-header">0.00</span>
+    </div>
+  </header>
+
+  <div class="sort-options">
+    <label for="sort-select" class="sort-optionslabel">Sort by:</label>
+    <select id="sort-select" class="sort-optionsselect">
+        <option value="default">Default</option>
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+    </select>
+  </div>
+
+  <section class="catalog">
+    <ul class="cataloglist" id="cataloglist">
+    </ul>
+  </section>
+
+  <div id="product-cart" class="cart-modal hidden-element">
+    <div class="cart-modalcontent" id="cart-content">
+        <h2 class="cart-modaltitle">Your Cart</h2>
+        <ul class="cart-modallist" id="product-cart-list">
+        </ul>
+        <div class="cart-modalsummary">
+          <p class="cart-modaltotal">Total: $<span id="cart-total">00.00</span></p>
+        </div>
+        <div class="cart-modalbuttons">
+          <button class="cart-modalclose-button" id="close-cart-button">Continue shopping</button>
+          <button class="cart-modal__checkout-button">Checkout</button>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
